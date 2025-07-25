@@ -36,7 +36,7 @@
                             <td><?= $i ?></td>
                             <td><?= $row['nama_kriteria'] ?></td>
                             <td><?= $row['bobot_kriteria'] ?></td>
-                            <td><?= $row['sifat_kriteria'] ?></td>
+                            <td><?= ucfirst($row['sifat_kriteria']) ?></td>
                             <td class="d-flex gap">
                                 <a href="ubah.php?id=<?= $row['id_kriteria'] ?>"
                                     class="gap d-flex align-items-center btn btn-outline-info btn-sm"><i

@@ -20,18 +20,24 @@ $row = mysqli_fetch_assoc($sql);
             <input type="hidden" name="id" value="<?= $id ?>">
             <div class="d-flex align-items-center mb-2">
                 <label class="col-4" for="kriteria">Kriteria</label>
-                <input value="<?=$row['nama_kriteria']?>" class="form-control w-100" name="kriteria" id="kriteria" type="text" required>
+                <input value="<?= $row['nama_kriteria'] ?>" class="form-control w-100" name="kriteria" id="kriteria"
+                    type="text" required>
             </div>
             <div class="d-flex align-items-center mb-2">
                 <label class="col-4" for="bobot">Bobot</label>
-                <input value="<?=$row['bobot_kriteria']?>" class="form-control w-100" name="bobot" id="bobot" type="number" required>
+                <input value="<?= $row['bobot_kriteria'] ?>" class="form-control w-100" name="bobot" id="bobot"
+                    type="number" required>
             </div>
             <div class="d-flex align-items-center mb-2">
                 <label class="col-4" for="sifat">Sifat Kriteria</label>
                 <select name="sifat" id="sifat" class="form-control w-100" required>
-                    <option value="<?=$row['sifat_kriteria']?>" selected><?=$row['sifat_kriteria']?></option>
-                    <option value="cost">Cost</option>
-                    <option value="benefit">Benefit</option>
+                    <option value="<?= $row['sifat_kriteria'] ?>" selected><?= ucfirst($row['sifat_kriteria']) ?>
+                    </option>
+                    <?php if ($row['sifat_kriteria'] == 'cost'): ?>
+                        <option value="benefit">Benefit</option>
+                    <?php elseif ($row['sifat_kriteria'] == 'benefit'): ?>
+                        <option value="cost">Cost</option>
+                    <?php endif; ?>
                 </select>
             </div>
             <div class="d-flex align-items-center mb-2">

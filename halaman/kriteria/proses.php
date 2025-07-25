@@ -8,7 +8,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $kriteria = trim(mysqli_real_escape_string($hub, $_POST['kriteria']));
         $bobot = trim(mysqli_real_escape_string($hub, $_POST['bobot']));
         $sifat = trim(mysqli_real_escape_string($hub, $_POST['sifat']));
-        mysqli_query($hub, "INSERT INTO tb_kriteria (nama_kriteria, bobot_kriteria, sifat_kriteria) VALUES ('$kriteria', '$bobot', '$sifat')") or die (mysqli_error($hub));
+        mysqli_query($hub, "INSERT INTO tb_kriteria (nama_kriteria, bobot_kriteria, sifat_kriteria) VALUES ('$kriteria', '$bobot', '$sifat')") or die(mysqli_error($hub));
         echo "<script>window.location='index.php'</script>";
+        exit();
+    } elseif (isset($_POST["ubah"])) {
+        $id = trim(mysqli_real_escape_string($hub, $_POST['id']));
+        $kriteria = trim(mysqli_real_escape_string($hub, $_POST['kriteria']));
+        $bobot = trim(mysqli_real_escape_string($hub, $_POST['bobot']));
+        $sifat = trim(mysqli_real_escape_string($hub, $_POST['sifat']));
+        mysqli_query($hub, "UPDATE tb_kriteria SET nama_kriteria = '$kriteria', bobot_kriteria = '$bobot', sifat_kriteria = '$sifat' WHERE id_kriteria = '$id'") or die(mysqli_error($hub));
+        echo "<script>window.location='index.php'</script>";
+        exit();
     }
 }
