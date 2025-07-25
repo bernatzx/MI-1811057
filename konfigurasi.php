@@ -16,6 +16,15 @@ function base($url = null)
     }
 }
 
+$menu = [
+    ['label' => 'Dashboard', 'url' => base('halaman/dashboard/')],
+    ['label' => 'Kriteria', 'url' => base('halaman/kriteria/')],
+    ['label' => 'Subkriteria', 'url' => base('halaman/subkriteria/')],
+    ['label' => 'Alternatif', 'url' => base('halaman/alternatif/')],
+    ['label' => 'Penilaian', 'url' => base('halaman/penilaian/')],
+    ['label' => 'Hasil', 'url' => base('halaman/hasil/')]
+];
+
 function VALID()
 {
     return isset($_SESSION['valid']) && $_SESSION['valid'] === true;
