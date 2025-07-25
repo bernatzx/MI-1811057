@@ -41,7 +41,8 @@
                                 <a href="ubah.php?id=<?= $row['id_kriteria'] ?>"
                                     class="gap d-flex align-items-center btn btn-outline-info btn-sm"><i
                                         class="fas fa-pencil"></i>Edit</a>
-                                <a onclick="return confirm('Anda akan menghapus?')" href="" class="btn btn-sm btn-danger"><i
+                                <a onclick="return confirm('Anda akan menghapus kriteria <?= $row['nama_kriteria'] ?>?')"
+                                    href="hapus.php?id=<?= $row['id_kriteria'] ?>" class="btn btn-sm btn-danger"><i
                                         class="fas fa-trash"></i></a>
                             </td>
                         </tr>
