@@ -4,8 +4,13 @@
         <div>
             <h4>Kriteria</h4>
         </div>
-        <div>
-            <a href="" class="btn btn-success">Tambah Kriteri</a>
+        <div class="d-flex align-items-center gap">
+            <div>
+                <a href="" class="btn btn-sm btn-outline-secondary"><i class="fas fa-refresh"></i></a>
+            </div>
+            <div>
+                <a href="" class="btn btn-sm btn-success">Tambah Kriteria</a>
+            </div>
         </div>
     </div>
     <div class="table-responsive">
@@ -21,19 +26,25 @@
             </thead>
             <tbody>
                 <?php
-                $jml = 10;
-                for ($i = 1; $i < $jml; $i++) { ?>
-                    <tr>
-                        <td><?=$i?></td>
-                        <td>kriteria1</td>
-                        <td>3</td>
-                        <td>cost</td>
-                        <td class="d-flex" style="gap: 0.5rem !important;">
-                            <a style="gap: 0.5rem !important;" href="" class="d-flex align-items-center btn btn-outline-info btn-sm"><i class="fas fa-pencil"></i>Edit</a>
-                            <a onclick="return confirm('Anda akan menghapus?')" href="" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
-                        </td>
-                    </tr>
-                <?php }
+                $i = 0;
+                $sql = mysqli_query($hub, 'SELECT * FROM tb_kriteria') or die(mysqli_error($hub));
+                if (mysqli_num_rows($sql) > 0) {
+                    while ($row = mysqli_fetch_assoc($sql)) {
+                        $i++; ?>
+                        <tr>
+                            <td><?= $i ?></td>
+                            <td><?= $row['nama_kriteria'] ?></td>
+                            <td><?= $row['bobot_kriteria'] ?></td>
+                            <td><?= $row['sifat_kriteria'] ?></td>
+                            <td class="d-flex gap">
+                                <a href="" class="gap d-flex align-items-center btn btn-outline-info btn-sm"><i
+                                        class="fas fa-pencil"></i>Edit</a>
+                                <a onclick="return confirm('Anda akan menghapus?')" href="" class="btn btn-sm btn-danger"><i
+                                        class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    <?php }
+                }
                 ?>
             </tbody>
         </table>

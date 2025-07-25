@@ -11,6 +11,13 @@ if (!VALID()) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Pendukung Keputusan</title>
     <link rel="stylesheet" href="<?= base('assets/css/bootstrap.min.css') ?>" />
+
+    <style>
+        .gap {
+            gap: 0.5rem !important;
+        }
+    </style>
+
 </head>
 
 <body>
