@@ -12,7 +12,7 @@
     </div>
     <div class="border mb-3"></div>
     <div>
-        <form action="">
+        <form action="proses.php" method="post">
             <div class="d-flex align-items-center mb-2">
                 <label class="col-4" for="kriteria">Kriteria</label>
                 <input class="form-control w-100" name="kriteria" id="kriteria" type="text" required>
