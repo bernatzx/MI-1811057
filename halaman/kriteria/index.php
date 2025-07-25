@@ -9,7 +9,7 @@
                 <a href="" class="btn btn-sm btn-outline-secondary"><i class="fas fa-refresh"></i></a>
             </div>
             <div>
-                <a href="" class="btn btn-sm btn-success">Tambah Kriteria</a>
+                <a href="tambah.php" class="d-flex align-items-center gap btn btn-sm btn-success"><i class="fas fa-plus"></i>Tambah Kriteria</a>
             </div>
         </div>
     </div>
