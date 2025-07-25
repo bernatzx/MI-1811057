@@ -1,4 +1,8 @@
-<?php require_once 'konfigurasi.php' ?>
+<?php require_once 'konfigurasi.php';
+if (!VALID()) {
+    echo "<script>window.location='" . base() . "'</script>";
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">

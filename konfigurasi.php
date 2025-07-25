@@ -15,4 +15,8 @@ function base($url = null)
         return $base;
     }
 }
-?>
+
+function VALID()
+{
+    return isset($_SESSION['valid']) && $_SESSION['valid'] === true;
+}
