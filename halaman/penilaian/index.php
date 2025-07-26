@@ -31,9 +31,6 @@
                                 <a href="beripenilaian.php?id=<?= $row['id_alternatif'] ?>"
                                     class="gap d-flex align-items-center btn btn-outline-success btn-sm"><i
                                         class="fas fa-pencil"></i>Beri Penilaian</a>
-                                <a onclick="return confirm('Anda akan menghapus alternatif <?= $row['nama_alternatif'] ?>?')"
-                                    href="hapus.php?id=<?= $row['id_alternatif'] ?>" class="btn btn-sm btn-danger"><i
-                                        class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php }

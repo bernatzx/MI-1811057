@@ -25,7 +25,7 @@ $alter = mysqli_fetch_assoc($sql);
             <h5><?=$alter['nama_alternatif']?></h5>
         </div>
         <form action="proses.php" method="post">
-            <input type="hidden" name="id" value="<?= $id ?>">
+            <input type="hidden" name="id_alternatif" value="<?= $id_alternatif ?>">
             <?php
             $sql_k = mysqli_query($hub, "SELECT * FROM tb_kriteria") or die(mysqli_error($hub));
             while ($baris_k = mysqli_fetch_assoc($sql_k)) { ?>
