@@ -47,6 +47,8 @@
                             </td>
                         </tr>
                     <?php }
+                } else {
+                    echo "<tr><td colspan=\"5\" align=\"center\">Data Kosong!</td></tr>";
                 }
                 ?>
             </tbody>

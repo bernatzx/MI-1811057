@@ -41,12 +41,14 @@
                                 <a href="ubah.php?id=<?= $row['id_subkriteria'] ?>"
                                     class="gap d-flex align-items-center btn btn-outline-info btn-sm"><i
                                         class="fas fa-pencil"></i>Edit</a>
-                                <a onclick="return confirm('Anda akan menghapus subkriteria <?= $row['nama_subkriteria'] ?> pada kriteria <?=$row['nama_kriteria']?>?')"
+                                <a onclick="return confirm('Anda akan menghapus subkriteria <?= $row['nama_subkriteria'] ?> pada kriteria <?= $row['nama_kriteria'] ?>?')"
                                     href="hapus.php?id=<?= $row['id_subkriteria'] ?>" class="btn btn-sm btn-danger"><i
                                         class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php }
+                } else {
+                    echo "<tr><td colspan=\"5\" align=\"center\">Data Kosong!</td></tr>";
                 }
                 ?>
             </tbody>
