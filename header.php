@@ -21,7 +21,7 @@ if (!VALID()) {
 </head>
 
 <body>
-    <nav class="navbar navbar-default container-fluid">
+    <nav class="navbar fixed-top navbar-default container-fluid" style="background-color: #fff;">
         <div class="d-flex">
             <?php $halamanAktif = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
             foreach ($menu as $item) {
@@ -36,5 +36,5 @@ if (!VALID()) {
         </div>
     </nav>
     <div class="border"></div>
-    <div class="container-fluid overflow-auto" style="background-color: #ebebeb; min-height: 90vh;">
+    <div class="container-fluid overflow-auto" style="padding-top: 40px;background-color: #ebebeb; min-height: 90vh;">
             
