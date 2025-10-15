@@ -18,7 +18,7 @@
         <table class="table table-striped table-bordered table-hover">
             <thead>
                 <tr>
-                    <th>No</th>
+                    <th>ID Kriteria</th>
                     <th>Kriteria</th>
                     <th>Bobot</th>
                     <th>Sifat</th>
@@ -27,13 +27,11 @@
             </thead>
             <tbody>
                 <?php
-                $i = 0;
                 $sql = mysqli_query($hub, 'SELECT * FROM tb_kriteria') or die(mysqli_error($hub));
                 if (mysqli_num_rows($sql) > 0) {
-                    while ($row = mysqli_fetch_assoc($sql)) {
-                        $i++; ?>
+                    while ($row = mysqli_fetch_assoc($sql)) { ?>
                         <tr>
-                            <td><?= $i ?></td>
+                            <td><?= $row['id_kriteria'] ?></td>
                             <td><?= $row['nama_kriteria'] ?></td>
                             <td><?= $row['bobot_kriteria'] ?></td>
                             <td><?= ucfirst($row['sifat_kriteria']) ?></td>

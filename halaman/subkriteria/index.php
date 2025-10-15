@@ -18,7 +18,7 @@
         <table class="table table-striped table-bordered table-hover">
             <thead>
                 <tr>
-                    <th>No</th>
+                    <th>ID Subkriteria</th>
                     <th>Kriteria</th>
                     <th>Subkriteria</th>
                     <th>Nilai</th>
@@ -27,13 +27,11 @@
             </thead>
             <tbody>
                 <?php
-                $i = 0;
                 $sql = mysqli_query($hub, 'SELECT s.*, k.nama_kriteria FROM tb_subkriteria s JOIN tb_kriteria k ON s.id_kriteria = k.id_kriteria') or die(mysqli_error($hub));
                 if (mysqli_num_rows($sql) > 0) {
-                    while ($row = mysqli_fetch_assoc($sql)) {
-                        $i++; ?>
+                    while ($row = mysqli_fetch_assoc($sql)) { ?>
                         <tr>
-                            <td><?= $i ?></td>
+                            <td><?= $row['id_subkriteria'] ?></td>
                             <td><?= $row['nama_kriteria'] ?></td>
                             <td><?= $row['nama_subkriteria'] ?></td>
                             <td><?= $row['nilai_subkriteria'] ?></td>

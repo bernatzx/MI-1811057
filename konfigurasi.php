@@ -9,7 +9,7 @@ if (mysqli_connect_errno()) {
 function base($url = null)
 {
     $base = 'http://localhost/spk-maryani';
-    if($url != null) {
+    if ($url != null) {
         return $base . '/' . $url;
     } else {
         return $base;
@@ -22,7 +22,8 @@ $menu = [
     ['label' => 'Subkriteria', 'url' => base('halaman/subkriteria/')],
     ['label' => 'Alternatif', 'url' => base('halaman/alternatif/')],
     ['label' => 'Penilaian', 'url' => base('halaman/penilaian/')],
-    ['label' => 'Hasil', 'url' => base('halaman/hasil/')]
+    ['label' => 'Hasil', 'url' => base('halaman/hasil/')],
+    ['label' => 'Grafik', 'url' => base('halaman/grafik/')]
 ];
 
 function VALID()

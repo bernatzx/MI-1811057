@@ -12,20 +12,18 @@
         <table class="table table-striped table-bordered table-hover">
             <thead>
                 <tr>
-                    <th>No</th>
+                    <th>ID Alternatif</th>
                     <th>Alternatif</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $i = 0;
                 $sql = mysqli_query($hub, 'SELECT * FROM tb_alternatif') or die(mysqli_error($hub));
                 if (mysqli_num_rows($sql) > 0) {
-                    while ($row = mysqli_fetch_assoc($sql)) {
-                        $i++; ?>
+                    while ($row = mysqli_fetch_assoc($sql)) { ?>
                         <tr>
-                            <td><?= $i ?></td>
+                            <td><?= $row['id_alternatif'] ?></td>
                             <td><?= $row['nama_alternatif'] ?></td>
                             <td class="d-flex gap">
                                 <a href="beripenilaian.php?id=<?= $row['id_alternatif'] ?>"

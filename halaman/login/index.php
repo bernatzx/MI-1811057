@@ -16,18 +16,14 @@ if (VALID()) {
             $pesanerror = 'Username atau password salah!';
         }
     }
-}
-?>
-
+}?>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Sistem</title>
     <link rel="stylesheet" href="<?= base('assets/css/bootstrap.min.css') ?>" />
 </head>
-
 <body class="d-flex justify-content-center align-items-center">
     <form method="post" class="col-4 m-auto">
         <div class="mb-3 fs-1 fw-bold">
@@ -66,5 +62,4 @@ if (VALID()) {
         });
     </script>
 </body>
-
 </html>
