@@ -244,8 +244,11 @@
     });
     ?>
     <div class="mb-4">
-        <div class="mb-3">
+        <div class="mb-3" style="font-weight: bold;">
             <span>Perangkingan</span>
+        </div>
+        <div class="mb-4" style="text-align: justify;">
+            <?php include('./desc.php') ?>
         </div>
         <div class="table-responsive">
             <table class="table table-striped table-bordered table-hover">
